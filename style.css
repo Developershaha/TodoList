@@ -1,0 +1,106 @@
+/* defiend the css variable for every tiem no need to applied the property simple write the varaible name ok  */
+/* always start with the double hypen  */
+:root {
+  --body-background: #f4f4f9;
+  --btn-primary: #5cabff;
+  --border-color: #ddd;
+  --btn-edit: #d8c83a;
+  --btn-complete: #49dc3e;
+  --btn-delete: #f31515;
+  --btn-active: #4a90e2;
+  --btn-secondary: #d8c83a;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--body-background);
+}
+
+.container {
+  background-color: white;
+  max-width: 600px;
+  margin: 30px auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+  padding: 20px;
+  border-radius: 5px;
+}
+
+h1 {
+  text-align: center;
+}
+#todoInput {
+  width: 75%;
+  padding: 10px;
+  margin-right: 10px;
+  border: 2px solid var(--border-color);
+  border-radius: 5px;
+}
+#addTodo {
+  padding: 10px 20px;
+  background-color: var(--btn-primary);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  padding: 10px;
+  border-bottom: 1px solid var(--border-color);
+}
+li:hover {
+  background-color: aliceblue;
+}
+li:last-child {
+  border-bottom: none;
+}
+
+.filteredBtn,
+.editBtn,
+.deleteBtn,
+.completeBtn {
+  margin: 5px;
+  padding: 10px 20px;
+  background-color: var(--btn-secondary);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.editBtn {
+  background-color: var(--btn-edit);
+}
+.deleteBtn {
+  background-color: var(--btn-delete);
+}
+.completeBtn {
+  background-color: var(--btn-complete);
+}
+
+.filteredBtn:hover {
+  background-color: var(--btn-active);
+}
+.todoItem {
+  letter-spacing: 1px;
+}
+
+.todoItem {
+  display: flex;
+  flex-direction: row;
+  margin-left: auto;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.completed {
+  text-decoration: line-through;
+}
